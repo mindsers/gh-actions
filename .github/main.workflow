@@ -1,4 +1,4 @@
-workflow "Test \"Pub" {
+workflow "Tests the Publish GitHub Wiki action" {
   resolves = ["Publish GitHub Wiki"]
   on = "push"
 }
