@@ -1,0 +1,13 @@
+{
+  "files": [
+    "CONTRIBUTORS.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [],
+  "contributorsPerLine": 7,
+  "projectName": "gh-actions",
+  "projectOwner": "mindsers",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
