@@ -9,7 +9,15 @@ LABEL "repository"="http://github.com/mindsers/gh-actions"
 LABEL "homepage"="http://github.com/mindsers/gh-actions/publish-wiki"
 LABEL "maintainer"="Mindsers <dev@nathanaelcherrier.com>"
 
-RUN apt-get update && apt-get install --no-install-recommends -y git && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y \
+        bash \
+        curl \
+        jq \
+        git \
+        openssh-client && \
+    apt-get clean -y && \
+    rm -rf /var/lib/apt/lists/*
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
