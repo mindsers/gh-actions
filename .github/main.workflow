@@ -11,4 +11,5 @@ action "Filters for GitHub Actions" {
 action "Publish GitHub Wiki" {
   needs = ["Filters for GitHub Actions"]
   uses = "./publish-wiki/"
+  args = "./docs"
 }
