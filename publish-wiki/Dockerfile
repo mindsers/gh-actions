@@ -9,5 +9,7 @@ LABEL "repository"="http://github.com/mindsers/gh-actions"
 LABEL "homepage"="http://github.com/mindsers/gh-actions/publish-wiki"
 LABEL "maintainer"="Mindsers <dev@nathanaelcherrier.com>"
 
+RUN apt-get install git
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
