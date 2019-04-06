@@ -1,8 +1,8 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["new-action"]
+  resolves = ["Publish GitHub Wiki"]
 }
 
 action "Publish GitHub Wiki" {
-  uses = "./publish-wiki"
+  uses = "./publish-wiki/"
 }
