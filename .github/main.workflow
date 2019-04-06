@@ -1,6 +1,6 @@
-workflow "New workflow" {
-  on = "push"
+workflow "Test \"Pub" {
   resolves = ["Publish GitHub Wiki"]
+  on = "push"
 }
 
 action "Publish GitHub Wiki" {
