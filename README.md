@@ -4,23 +4,23 @@ This repository stores some useful Github Actions needed for my other projects.
 
 GitHub Actions available:
 
-- [Publish Github Wiki](https://github.com/Mindsers/gh-action/blob/develop/publish-wiki/)
+- [Publish Github Wiki](https://github.com/Mindsers/gh-actions/blob/develop/publish-wiki/)
 
 ## Contribution
 
-Contributions to the source code of *GitHub Actions by Mindsers (gh-action)* are welcomed and greatly appreciated. For help on how to contribute in this project, please refer to [How to contribute to *gh-action*](https://github.com/Mindsers/gh-action/blob/develop/CONTRIBUTING.md).
+Contributions to the source code of *GitHub Actions by Mindsers (gh-actions)* are welcomed and greatly appreciated. For help on how to contribute in this project, please refer to [How to contribute to *gh-actions*](https://github.com/Mindsers/gh-actions/blob/develop/CONTRIBUTING.md).
 
-To see the contributors list, go to the [CONTRIBUTORS.md](https://github.com/mindsers/gh-action/blob/develop/CONTRIBUTORS.md) file.
+To see the contributors list, go to the [CONTRIBUTORS.md](https://github.com/mindsers/gh-actions/blob/develop/CONTRIBUTORS.md) file.
 
 ## Support
 
-*GitHub Actions by Mindsers* is licensed under an MIT license, which means that it's completely free open source software. Unfortunately, *gh-action* doesn't make it itself. Which will result in many late, beer-filled nights of development for me.
+*GitHub Actions by Mindsers* is licensed under an MIT license, which means that it's completely free open source software. Unfortunately, *gh-actions* doesn't make it itself. Which will result in many late, beer-filled nights of development for me.
 
-If you're using *gh-action* and want to support the development, you now have the chance! Go on my [Patreon page](https://www.patreon.com/mindsers) and become my joyful patron!!
+If you're using *gh-actions* and want to support the development, you now have the chance! Go on my [Patreon page](https://www.patreon.com/mindsers) and become my joyful patron!!
 
 [![Become a Patron!](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=9715649)
 
-For help on how to support *gh-action*, please refer to [The awesome people who support *gh-action*](https://github.com/Mindsers/gh-action/blob/develop/SPONSORS.md).
+For help on how to support *gh-actions*, please refer to [The awesome people who support *gh-actions*](https://github.com/Mindsers/gh-actions/blob/develop/SPONSORS.md).
 
 <!-- ### Premium sponsors -->
 
