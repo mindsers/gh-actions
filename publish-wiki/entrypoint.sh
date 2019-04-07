@@ -12,7 +12,7 @@ fi
 
 if [ -n "${SSH_KEY:-}" ] || [ -n "${SSH_KEY_VAR:-}" ]; then
     doc_path=$*
-    wiki_path="git@github.com:${GITHUB_REPOSITORY}/wiki.git"
+    wiki_path="git@github.com:${GITHUB_REPOSITORY}.wiki.git"
 
     eval "$(ssh-agent -s)" >/dev/null
     mkfifo -m 600 ~/.ssh_key.fifo
