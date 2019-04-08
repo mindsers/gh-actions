@@ -27,3 +27,5 @@ cp -rv ${doc_path}/* wiki_folder_temp
 cd wiki_folder_temp
 git commit -am "${GITHUB_ACTOR} - ${GITHUB_SHA}"
 git push
+
+exit 0
