@@ -5,9 +5,9 @@ LABEL "com.github.actions.description"="Automatically publish a folder from your
 LABEL "com.github.actions.icon"="file-text"
 LABEL "com.github.actions.color"="grey-dark"
 
-LABEL "repository"="http://github.com/mindsers/gh-actions"
-LABEL "homepage"="http://github.com/mindsers/gh-actions/publish-wiki"
-LABEL "maintainer"="Mindsers <dev@nathanaelcherrier.com>"
+LABEL "repository"="https://github.com/mindsers/gh-actions"
+LABEL "homepage"="https://github.com/mindsers/gh-actions/publish-wiki"
+LABEL "maintainer"="Nathanaël CHERRIER <dev@nathanaelcherrier.com>"
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
