@@ -12,19 +12,18 @@ fi
 
 if [ -n "${SSH_KEY:-}" ] || [ -n "${SSH_KEY_VAR:-}" ]; then
     doc_path=$*
-    wiki_path="${GITHUB_REPOSITORY}.wiki"
-    wiki_repo="git@github.com:${wiki_path}.git"
+    wiki_repo="git@github.com:${GITHUB_REPOSITORY}.wiki.git"
 
     eval "$(ssh-agent -s)" >/dev/null
     mkfifo -m 600 ~/.ssh_key.fifo
     printf -- "${!SSH_KEY_VAR:-"$SSH_KEY"}\n" >~/.ssh_key.fifo | ssh-add ~/.ssh_key.fifo
     rm ~/.ssh_key.fifo
 
-    git clone ${wiki_repo}
-    rm -rf ${wiki_path}/.
+    git clone ${wiki_repo} wiki_folder_temp
+    rm -rf wiki_folder_temp/.
 
-    cp -r ${doc_path}/* ${wiki_path}
-    cd ${wiki_path}
+    cp -r ${doc_path}/* wiki_folder_temp
+    cd wiki_folder_temp
     git commit -am "${GITHUB_ACTOR} - ${GITHUB_SHA}"
     git push
 fi
