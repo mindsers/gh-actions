@@ -20,7 +20,7 @@ if [ -n "${SSH_KEY:-}" ] || [ -n "${SSH_KEY_VAR:-}" ]; then
     rm ~/.ssh_key.fifo
 
     git clone ${wiki_repo} wiki_folder_temp
-    rm -rf wiki_folder_temp/.
+    rm -rf wiki_folder_temp/*
 
     cp -r ${doc_path}/* wiki_folder_temp
     cd wiki_folder_temp
