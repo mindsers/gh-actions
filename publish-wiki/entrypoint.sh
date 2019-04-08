@@ -8,7 +8,7 @@ if [ "${SSH_KEY:-}" ] && [ "${SSH_KEY_VAR:-}" ] && [ "${GITHUB_TOKEN:-}" ]; then
     exit 2
 fi
 
-doc_path=$*
+doc_path=$@
 wiki_repo="git@github.com:${GITHUB_REPOSITORY}.wiki.git"
 
 profile="$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/users/${GITHUB_ACTOR}")"
