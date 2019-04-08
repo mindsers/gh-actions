@@ -1,9 +1,9 @@
-workflow "Tests the Publish GitHub Wiki action" {
+workflow "Tests the Publish GitHub to Wiki action" {
   on = "push"
-  resolves = ["Publish GitHub Wiki"]
+  resolves = ["Publish to GitHub Wiki"]
 }
 
-action "Publish GitHub Wiki" {
+action "Publish to GitHub Wiki" {
   uses = "./publish-wiki/"
   args = "./docs"
   secrets = [
