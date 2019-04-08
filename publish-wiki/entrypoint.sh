@@ -21,8 +21,8 @@ if [ -n "${SSH_KEY:-}" ] || [ -n "${SSH_KEY_VAR:-}" ]; then
 
     git clone ${wiki_repo} wiki_folder_temp
     rm -rf wiki_folder_temp/*
-    echo $doc_path
-    cp -r ${doc_path}/* wiki_folder_temp
+
+    cp -rv ${doc_path}/* wiki_folder_temp
     cd wiki_folder_temp
     git commit -am "${GITHUB_ACTOR} - ${GITHUB_SHA}"
     git push
