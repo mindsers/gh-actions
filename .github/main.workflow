@@ -4,10 +4,7 @@ workflow "Tests the Publish GitHub to Wiki action" {
 }
 
 action "Publish to GitHub Wiki" {
-  uses = "./publish-wiki/"
+  uses = "./publish-wiki"
   args = "./docs"
-  secrets = [
-    "SSH_KEY",
-    "GITHUB_TOKEN",
-  ]
+  secrets = ["GITHUB_TOKEN", "SSH_KEY"]
 }
