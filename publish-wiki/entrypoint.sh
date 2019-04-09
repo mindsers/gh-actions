@@ -6,8 +6,8 @@ function configureGit {
     token=$1
     actor=$2
 
-    if ! [[ -n "${SSH_KEY:-}" ]]; then
-        (>&2 echo "ERROR. SSH_KEY is mandatory.")
+    if ! [[ -n "${token:-}" ]]; then
+        (>&2 echo "ERROR. GITHUB_TOKEN is mandatory.")
         exit 1
     fi
 
@@ -19,8 +19,8 @@ function configureGit {
 function configureSsh {
     key=$1
 
-    if ! [[ -n "${GITHUB_TOKEN:-}" ]]; then
-        (>&2 echo "ERROR. GITHUB_TOKEN are mandatory.")
+    if ! [[ -n "${key:-}" ]]; then
+        (>&2 echo "ERROR. SSH_KEY are mandatory.")
         exit 1
     fi
 
