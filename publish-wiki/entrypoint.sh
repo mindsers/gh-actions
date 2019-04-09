@@ -4,12 +4,12 @@ set -euo pipefail
 
 echo "github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==" >>/etc/ssh/ssh_known_hosts
 
-if [ !${SSH_KEY} ] || [ !${GITHUB_TOKEN} ]; then
-    echo "Fail. SSH_KEY and GITHUB_TOKEN are mandatory."
+if ! [[ -n "${SSH_KEY:-}" ]] || ! [[ -n "${GITHUB_TOKEN:-}" ]]; then
+    (>&2 echo "ERROR. SSH_KEY and GITHUB_TOKEN are mandatory.")
     exit 2
 fi
 
-doc_path=$@
+doc_path=$*
 wiki_repo="git@github.com:${GITHUB_REPOSITORY}.wiki.git"
 
 profile="$(curl -s -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/users/${GITHUB_ACTOR}")"
