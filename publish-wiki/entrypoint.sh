@@ -25,16 +25,16 @@ function updateWiki {
     wiki_repo="https://${GITHUB_TOKEN}@github.com:${wiki_repo_name}.wiki.git"
 
     echo "Uploading ${doc_path} content to ${wiki_repo}"
-    git clone ${wiki_repo} wiki_folder_temp
-    rm -rf wiki_folder_temp/*
+    git clone ${wiki_repo} wiki_folder_temp --verbose
+    rm -rvf wiki_folder_temp/*
 
     cp -rv ${doc_path} /* wiki_folder_temp
     cd wiki_folder_temp
-    git commit -am ${commit_message}
-    git push
+    git commit -am ${commit_message} --verbose
+    git push --verbose
 
     exit 0
 }
 
 configureGit ${GITHUB_TOKEN} ${GITHUB_ACTOR}
-updateWiki $* ${GITHUB_REPOSITORY} "${GITHUB_ACTOR} - ${GITHUB_SHA}"
+updateWiki $1 ${GITHUB_REPOSITORY} "${GITHUB_ACTOR} - ${GITHUB_SHA}"
