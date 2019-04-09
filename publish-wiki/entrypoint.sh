@@ -37,7 +37,7 @@ function updateWiki {
     commit_message=$3
 
     echo "Wiki update starts..."
-    wiki_repo="git@github.com:${wiki_repo_name}.wiki.git"
+    wiki_repo="https://${GITHUB_TOKEN}@github.com:${wiki_repo_name}.wiki.git"
 
     echo "Uploading ${doc_path} content to ${wiki_repo}"
     git clone ${wiki_repo} wiki_folder_temp
